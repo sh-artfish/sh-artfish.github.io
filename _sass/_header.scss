@@ -1,10 +1,14 @@
 .site-header {
     font-size: 2em;
     padding: 0.7em 0;
-    background-color: $brand-color;
-    border-top: 3px solid rgba(#000, .5);
+    min-height: 230px;
+    background: url('/assets/img/header.jpg') no-repeat scroll left top;
+    background-size: 960px auto;
+    border-bottom: 3px solid $brand-color;
     @media screen and (max-width: $mobile-width) {
         text-align: center;
+        min-height: 140px;
+        background-size: 600px auto;
     }
 
     .avatar {
@@ -21,9 +25,10 @@
     }
 
     h1 {
-        font-size: 1em;
+        font-size: 2em;
         line-height: 1em;
         margin: 0;
+        text-align: right;
         .title {
             display: inline-block;
             color: $site-title-color;
@@ -42,6 +47,9 @@
             line-height: 1em;
             margin-top: 0.5em;
             color: lighten($site-title-color, 20%);
+        }
+        @media screen and (max-width: $mobile-width) {
+            font-size: 1em;
         }
     }
 }

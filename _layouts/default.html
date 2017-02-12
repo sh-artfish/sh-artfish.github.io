@@ -46,6 +46,12 @@
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet">
 
     <link href="{{ '/assets/css/style.css' | prepend: site.baseurl }}" rel="stylesheet">
+
+    {% if page.permalink == '/address' %}
+    <script src="https://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <script src="{{ '/assets/js/baidu_map_setting.js' | prepend: site.baseurl }}"></script>
+    <link href="{{ '/assets/css/baidu_map.css' | prepend: site.baseurl }}" rel="stylesheet">    
+    {% endif %}    
 </head>
 <body>
 
@@ -82,6 +88,7 @@
                 <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
                 {% endif %}
                 {% endfor %}
+                <li><a class="page-link" href="{{ site.baseurl }}/search/?t=作品展">作品展まとめ</a></li>
             </ul>
             <ul class="icons">
                 {% include icons.html icons=site.icons %}
@@ -109,11 +116,11 @@
 
 <footer class="site-footer">
     <div class="inner">
-        <span>Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://github.com/ttskch/jekyll-ttskch-theme">TtskchTheme</a></span>
+        <span><a href="{{ '/' | prepend: site.baseurl }}">{{ site.title }}</a> All Rights Reserved.</span>
     </div>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="{{ '/assets/lib/garand-sticky/jquery.sticky.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>
 

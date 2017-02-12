@@ -4,24 +4,24 @@
 # url: http://localhost:4000
 # baseurl: ""
 url: http://sh-artfish.github.io
-baseurl: ""
-title: Your name
-description: Some descriptions of yourself.
-avatar: /assets/img/ogp.png
+baseurl: 
+title: 上海アートフィッシュ
+description: 子ども創作クラス
+avatar: 
 # favicon: /favicon.ico
-favicon: /assets/img/ogp.png
+favicon: 
 # language: ja
-language: en
+language: ja
 
 #
 # Icons
 #
 icons:
-  rss: true
+  rss: false
   email:
-  github: ttskch
+  github:
   bitbucket:
-  twitter: ttskch
+  twitter:
   facebook:
   google_plus:
   tumblr:
@@ -74,11 +74,11 @@ paginate_path: page/:num
 # Social.
 #
 share_buttons:
-  twitter: true
+  twitter: false
   facebook: false # needs ogp.fb.app_id
   hatena: false
 ogp:
-  image_url: //ttskch.github.io/jekyll-ttskch-theme/assets/img/ogp.png
+  image_url:
   fb:
     admin: # facebook admin id
     app_id: # facebook application id
