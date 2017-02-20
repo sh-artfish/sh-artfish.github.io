@@ -12,3 +12,6 @@ share: false
 <!--百度地图容器-->
 <div id="dituContent" style="width: 100%; height: 550px; border: #ccc solid 1px;"></div>
 
+<script src="https://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<script src="{{ '/assets/js/baidu_map_setting.js' | prepend: site.baseurl }}"></script>
+<link href="{{ '/assets/css/baidu_map.css' | prepend: site.baseurl }}" rel="stylesheet">    
