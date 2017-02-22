@@ -71,6 +71,11 @@
     <aside class="site-aside">
         <div class="inner">
             <div class="block">
+                <a href="{% link _pages/contact.md %}">
+                    <img src="{{ '/assets/img/inquiry-banner.png' | prepend: site.baseurl }}" alt=""/>
+                </a>
+            </div>
+            <div class="block">
                 <form action="{{ site.baseurl }}/search">
                     <input type="search" id="search" name="q" placeholder="{{ site.str_search }}" />
                 </form>
@@ -110,7 +115,8 @@
 
 <footer class="site-footer">
     <div class="inner">
-        <span><a href="{{ '/' | prepend: site.baseurl }}">{{ site.title }}</a> All Rights Reserved.</span>
+        <p>&copy; 2012 <a href="{{ '/' | prepend: site.baseurl }}">{{ site.title }}</a></p>
+        <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>この 作品 は <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">クリエイティブ・コモンズ 表示 - 非営利 - 改変禁止 4.0 国際 ライセンス</a>の下に提供されています。</p>
     </div>
 </footer>
 

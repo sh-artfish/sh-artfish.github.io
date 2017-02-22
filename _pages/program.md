@@ -6,4 +6,4 @@ order: 2
 share: false
 ---
 
-![プロクラム表]({{ site.baseurl }}image/pages/program/program_table.jpg)
+![プロクラム表]({{ site.baseurl }}/image/pages/program/program_table.jpg)
