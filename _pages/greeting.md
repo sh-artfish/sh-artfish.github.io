@@ -1,9 +1,9 @@
 ---
 layout: page
-title: ごあいさつ
-permalink: /greeting
-order: 0
+title: アートフィッシュへようこそ!
 share: false
+hide: true
+sitemap: false
 ---
 
 　「考える力はアートでのばす。」をモットーに2008年から[韓国本院](http://cafe.naver.com/iartfish)の協力で子供たちの創造性啓発に取り組みました。のびのびと意欲的に工作する生徒さんとそれを喜んで見守る親御さんを見ているととても幸せです。まさに私が望んでいたものがここにあったと感じています。

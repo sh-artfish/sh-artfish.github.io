@@ -4,6 +4,7 @@ title: 入会案内
 permalink: /guidance_for_joining
 order: 4
 share: false
+topnav: true
 ---
 
 ## 募集コース・対象年齢

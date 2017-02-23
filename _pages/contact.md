@@ -4,6 +4,8 @@ title: お問い合わせ
 permalink: /contact
 order: 6
 share: false
+topnav: true
+sitemap: false
 ---
 
 ご意見、ご質問、メッセージ等々お気軽にお問い合わせください。

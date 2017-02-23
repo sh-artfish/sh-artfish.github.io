@@ -46,6 +46,8 @@
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet">
 
     <link href="{{ '/assets/css/style.css' | prepend: site.baseurl }}" rel="stylesheet">
+
+    {% include google-analytics.html %}
 </head>
 <body>
 
@@ -63,6 +65,19 @@
     </div>
 </header>
 
+<ul class="topnav" id="top-navbar">
+    <li><a href="{{ '/' | prepend: site.baseurl }}">ホーム</a></li>
+    {% assign pages = (site.pages | sort: 'order') %}
+    {% for page in pages %}
+    {% if page.title and page.hide != true and page.topnav %}
+    <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+    <li class="icon">
+        <a @click.prevent="toggle">&#9776;</a>
+    </li>
+</ul>
+
 <div class="site-container">
     <div class="site-content">
         {{ content }}
@@ -71,11 +86,6 @@
     <aside class="site-aside">
         <div class="inner">
             <div class="block">
-                <a href="{% link _pages/contact.md %}">
-                    <img src="{{ '/assets/img/inquiry-banner.png' | prepend: site.baseurl }}" alt=""/>
-                </a>
-            </div>
-            <div class="block">
                 <form action="{{ site.baseurl }}/search">
                     <input type="search" id="search" name="q" placeholder="{{ site.str_search }}" />
                 </form>
@@ -83,7 +93,7 @@
             <ul>
                 {% assign pages = (site.pages | sort: 'order') %}
                 {% for page in pages %}
-                {% if page.title and page.hide != true %}
+                {% if page.title and page.hide != true and page.topnav != true %}
                 <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
                 {% endif %}
                 {% endfor %}
@@ -120,6 +130,7 @@
     </div>
 </footer>
 
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="{{ '/assets/lib/garand-sticky/jquery.sticky.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>
@@ -133,7 +144,6 @@
 {% endif %}
 
 {% include fb-root.html %}
-{% include google-analytics.html %}
 
 </body>
 </html>

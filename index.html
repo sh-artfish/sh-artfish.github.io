@@ -2,25 +2,16 @@
 layout: default
 ---
 
-{% for post in paginator.posts %}
+{% for page in site.pages %}
+{% if page.path == '_pages/greeting.md' %}
 <div class="article-wrapper">
     <article>
-    {% include article-header.html page=post link=true %}
+        {% include article-header.html page=page link=false share=page.share %}
         <section class="post-content">
-            {% assign size = post.content | split: site.excerpt_separator | size %}
-            {% if size > 1 %}
-            {{ post.excerpt }}
-            <a class="btn" href="{{ post.url | prepend: site.baseurl }}">{{ site.str_read_more }}</a>
-            {% else %}
-            {{ post.content }}
-            {% endif %}
+            {{ page.content }}
         </section>
+        {% include article-footer.html page=page share=page.share %}
     </article>
 </div>
-
-{% if forloop.last != true %}
-<hr/>
 {% endif %}
 {% endfor %}
-
-{% include paginator.html %}
