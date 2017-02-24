@@ -11,7 +11,7 @@ sitemap: false
 ご意見、ご質問、メッセージ等々お気軽にお問い合わせください。
 
 ## フォームでのお問い合わせ
-<form id="inquiry-form" action="https://iav2l33uoj.execute-api.ap-northeast-1.amazonaws.com/release/sendmail" method="POST">
+<form id="inquiry-form" v-on:submit.prevent="inquiry">
 
 <p>お名前 <span style="color: #ff0000;">(必須)</span><br />
 <input type="text" name="name" value="" size="40" required></p>
@@ -38,9 +38,9 @@ sitemap: false
 <p>お問い合わせ内容<br />
 <textarea name="content" cols="40" rows="10"></textarea></p>
 
-<p><input type="submit" value="送信"></p>
+<p v-html="submitHtml"></p>
+<div v-bind:class="msgClass" v-text="msgText"></div>
 </form>
-<div id="inquiry-message"></div>
 
 ## お電話でのお問い合わせ
 
