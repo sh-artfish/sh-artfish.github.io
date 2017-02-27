@@ -40,4 +40,12 @@ window.onload=function() {
             }
         }
     });
+
+    var regex = RegExp("[?&]category=([^&]+)", 'i');
+    var matched;
+    if (matched = window.location.search.match(regex)) {
+        category = decodeURIComponent(matched[1]).replace(/(　| )+/g, ' ');
+        console.log(category)
+        $('select[name="category"]').append('<option value="' + category + '" selected>' + category + '</option>');
+    }
 };

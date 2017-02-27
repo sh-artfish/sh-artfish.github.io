@@ -7,7 +7,7 @@ share: false
 topnav: true
 ---
 
-※クラス新設も可能です。 詳しくは講師まで[お問い合わせ]({% link _pages/contact.md %})ください。
+※クラス新設も可能です。 詳しくは講師まで[お問い合わせ]({% link _pages/contact.md %}){:target="_blink"}ください。
 
 ![現在クラス状況]({{ site.baseurl }}/image/pages/class_status/class_info160908.jpg)
 

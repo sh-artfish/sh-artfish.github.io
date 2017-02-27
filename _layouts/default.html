@@ -74,7 +74,7 @@
     {% endif %}
     {% endfor %}
     <li class="icon">
-        <a @click.prevent="toggle">&#9776;</a>
+        <a @click.prevent="toggle">&nbsp;</a>
     </li>
 </ul>
 
@@ -93,7 +93,7 @@
             <ul>
                 {% assign pages = (site.pages | sort: 'order') %}
                 {% for page in pages %}
-                {% if page.title and page.hide != true and page.topnav != true %}
+                {% if page.title and page.hide != true %}
                 <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
                 {% endif %}
                 {% endfor %}

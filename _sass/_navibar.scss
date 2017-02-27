@@ -31,6 +31,7 @@ ul.topnav li a:hover {
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
 ul.topnav li.icon {
     display: none;
+    background: url(/assets/img/menu_icon.png) no-repeat scroll center center;
 }
 
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
