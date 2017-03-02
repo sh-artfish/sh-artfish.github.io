@@ -30,14 +30,15 @@ $(function () {
     // top navbar toggle
     new Vue({
         el: '#top-navbar',
+        data: {
+            classObj: {
+                topnav: true,
+                responsive: false
+            }
+        },
         methods: {
-            toggle: function (event) {
-                $_ = $(this.$el);
-                if ($_.hasClass("responsive")) {
-                    $_.removeClass("responsive");
-                } else {
-                    $_.addClass("responsive");
-                }
+            toggle: function() {
+                this.classObj.responsive = this.classObj.responsive? false: true;
             }
         }
     })

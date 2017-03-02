@@ -65,7 +65,7 @@
     </div>
 </header>
 
-<ul class="topnav" id="top-navbar">
+<ul class="topnav" v-bind:class="classObj" id="top-navbar">
     <li><a href="{{ '/' | prepend: site.baseurl }}">ホーム</a></li>
     {% assign pages = (site.pages | sort: 'order') %}
     {% for page in pages %}
