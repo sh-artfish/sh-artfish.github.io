@@ -10,11 +10,20 @@ window.onload=function() {
         methods: {
             inquiry: function() {
                 _ = this;
+                let elements = _.$el.elements;
+                let data = {
+                    "name": elements["name"].value,
+                    "email": elements["email"].value,
+                    "tel": elements["tel"].value,
+                    "category": elements["category"].value,
+                    "content": elements["content"].value
+                };
     
                 $.ajax({
-                    url: 'https://iav2l33uoj.execute-api.ap-northeast-1.amazonaws.com/release/sendmail',
+                    url: "https://prod-20.japaneast.logic.azure.com:443/workflows/7940cb1cf6d94b28b48d3d360e521514/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=QPQ0EylyXbvSMpXEek70gAlrTNiFM3GibQpiTrQ4GNk",
                     type: 'post',
-                    data: JSON.stringify($(_.$el).serializeArray()),
+                    contentType: "application/json",
+                    data: JSON.stringify(data),
                     timeout: 10000,
                     dataType: 'json',
         
