@@ -1,0 +1,9 @@
+version: '2'
+services:
+  jekyll-sh-artfish:
+    image: jekyll/jekyll:3.8.5
+    ports:
+      - 80:4000
+    volumes:
+      - "..:/srv/jekyll:z"
+    command: jekyll serve --force-polling
