@@ -28,18 +28,7 @@ $(function () {
     });
 
     // top navbar toggle
-    new Vue({
-        el: '#top-navbar',
-        data: {
-            classObj: {
-                topnav: true,
-                responsive: false
-            }
-        },
-        methods: {
-            toggle: function() {
-                this.classObj.responsive = this.classObj.responsive? false: true;
-            }
-        }
-    })
+    $("#top-navbar").click(function () {
+        $(this).toggleClass("responsive");
+    });
 });
